@@ -1,0 +1,106 @@
+:root {
+  --ink: #10283c;
+  --muted: #5f7180;
+  --paper: #f4f7f7;
+  --card: #ffffff;
+  --navy: #071b2e;
+  --cyan: #1ab7b0;
+  --line: #dce6e8;
+  --amber: #d88a2d;
+  --shadow: 0 18px 45px rgba(7, 27, 46, .09);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+}
+a { color: inherit; }
+.hero {
+  color: white;
+  background:
+    radial-gradient(circle at 82% 15%, rgba(26,183,176,.35), transparent 28%),
+    linear-gradient(135deg, #071b2e, #103d55 70%, #0b665f);
+  padding: 72px 24px 58px;
+}
+.hero.compact { padding-bottom: 46px; }
+.hero-inner, .container { max-width: 980px; margin: 0 auto; }
+.eyebrow { margin: 0 0 8px; color: #5ee0d6; font-size: .76rem; font-weight: 800; letter-spacing: .18em; }
+h1 { margin: 0; font-family: Georgia, "Yu Mincho", serif; font-size: clamp(2.2rem, 6vw, 4.4rem); line-height: 1.08; }
+.issue-date { margin: 16px 0 6px; color: #b8d8dc; font-weight: 700; }
+.overview { max-width: 760px; margin: 12px 0 0; font-size: 1.04rem; }
+.category-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.category-chip { padding: 6px 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.08); font-size: .82rem; }
+.category-chip b { margin-left: 5px; color: #5ee0d6; }
+.container { padding: 30px 20px 60px; }
+.method-note, .why, .study-row { display: flex; gap: 14px; align-items: flex-start; }
+.method-note { margin-bottom: 24px; padding: 15px 18px; border-left: 4px solid var(--cyan); background: #e9f5f4; border-radius: 0 10px 10px 0; }
+.method-note strong, .why strong, .study-row strong { flex: 0 0 auto; }
+.paper-list { display: grid; gap: 24px; }
+.paper-card, .latest-card, .archive {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.paper-card { padding: clamp(22px, 5vw, 42px); }
+.paper-topline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.paper-number { margin-right: 4px; color: var(--cyan); font-family: Georgia, serif; font-size: 1.45rem; font-weight: 700; }
+.badge { padding: 4px 9px; border-radius: 6px; font-size: .72rem; font-weight: 800; }
+.badge.category { color: #075a57; background: #d9f1ef; }
+.badge.importance { color: #7b4304; background: #fff0d5; }
+.impact { margin-left: auto; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.paper-card h2 { margin: 18px 0 5px; font-size: clamp(1.3rem, 3vw, 1.85rem); line-height: 1.45; }
+.original-title { margin: 0; color: #526979; font-family: Georgia, serif; font-size: .93rem; line-height: 1.55; }
+.citation { margin: 10px 0 0; color: var(--muted); font-size: .8rem; }
+.one-liner { margin: 24px 0 14px; padding: 16px 18px; border-radius: 10px; color: white; background: var(--navy); font-weight: 700; }
+.why { margin: 14px 0 22px; color: #425b6d; font-size: .9rem; }
+.visual-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.visual-cell { min-height: 120px; padding: 14px; border-right: 1px solid var(--line); background: #fbfdfd; }
+.visual-cell:last-child { border-right: 0; }
+.visual-cell span { color: var(--cyan); font-size: .68rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.visual-cell p { margin: 7px 0 0; font-size: .88rem; line-height: 1.55; }
+.study-row { margin-top: 14px; padding: 10px 0; font-size: .88rem; border-bottom: 1px solid var(--line); }
+.results, .takeaway { margin-top: 22px; }
+h3 { margin: 0 0 10px; font-family: Georgia, serif; font-size: 1rem; }
+.result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.result { padding: 13px 15px; border-radius: 10px; background: #edf5f5; }
+.result span { display: block; color: var(--muted); font-size: .72rem; }
+.result strong { display: block; margin-top: 3px; font-size: .95rem; }
+.takeaway { padding: 17px 19px; border-radius: 12px; background: #fff7e8; border: 1px solid #f0d7ac; }
+.takeaway h3 { color: #9b5b11; }
+.takeaway p { margin: 0; }
+details { margin-top: 18px; color: var(--muted); font-size: .88rem; }
+summary { cursor: pointer; color: var(--ink); font-weight: 700; }
+.link-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.button { display: inline-block; padding: 8px 14px; border: 1px solid #9db1bc; border-radius: 8px; text-decoration: none; font-size: .82rem; font-weight: 800; }
+.button:hover { transform: translateY(-1px); }
+.button.primary { color: white; border-color: var(--cyan); background: var(--cyan); }
+.button.large { margin-top: 18px; padding: 11px 18px; }
+.latest-card, .archive { margin-bottom: 26px; padding: clamp(24px, 5vw, 42px); }
+.latest-card h2, .archive h2 { margin: 0 0 14px; }
+.latest-card ol { padding-left: 22px; }
+.latest-card li { margin: 8px 0; }
+.latest-card li span { display: inline-block; margin-right: 8px; padding: 2px 7px; color: #075a57; background: #d9f1ef; border-radius: 5px; font-size: .72rem; font-weight: 800; }
+.archive { display: grid; gap: 10px; }
+.archive-item { display: grid; grid-template-columns: 120px 1fr auto; gap: 14px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.archive-item em { color: var(--muted); font-size: .78rem; font-style: normal; }
+footer { padding: 34px 4px 0; color: var(--muted); font-size: .78rem; text-align: center; }
+
+@media (max-width: 720px) {
+  .hero { padding-top: 48px; }
+  .visual-grid { grid-template-columns: 1fr 1fr; }
+  .visual-cell { border-bottom: 1px solid var(--line); }
+  .visual-cell:nth-child(2) { border-right: 0; }
+  .visual-cell:nth-child(3), .visual-cell:nth-child(4) { border-bottom: 0; }
+  .result-grid { grid-template-columns: 1fr; }
+  .impact { width: 100%; margin-left: 0; }
+  .method-note, .why, .study-row { display: block; }
+  .method-note strong, .why strong, .study-row strong { display: block; margin-bottom: 4px; }
+  .archive-item { grid-template-columns: 1fr; gap: 0; }
+}
+
